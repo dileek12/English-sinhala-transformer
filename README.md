@@ -56,23 +56,23 @@ The original Transformer architecture uses:
 The attention mechanism is defined as:
 
 $$
-\text{Attention}(Q,K,V)
+\operatorname{Attention}(Q,K,V)
 =
-\text{softmax}
+\operatorname{softmax}
 \left(
-\frac{QK^T}{\sqrt{d_k}}
+\frac{QK^{T}}{\sqrt{d_k}}
 \right)V
 $$
 
 where:
 
-* $Q$ = Queries
-* $K$ = Keys
-* $V$ = Values
-* $d_k$ = Dimension of the key vectors
+- $Q$ = Queries
+- $K$ = Keys
+- $V$ = Values
+- $d_k$ = Dimension of the key vectors
 
 <p align="center" style="background-color: white; padding: 20px;">
-  <img src="images/attention_mechanism.png" width="150">
+  <img src="images/attention_mechanism.png" width="300">
   <br>
   <font color="black">
     <em><b>Figure 2:</b> Scaled dot-product attention mechanism.</em>
@@ -84,18 +84,22 @@ where:
 Multi-head attention applies the attention mechanism in parallel using multiple learned projections:
 
 $$
-\text{MultiHead}(Q,K,V)
+\operatorname{MultiHead}(Q,K,V)
 =
-\text{Concat}(\text{head}_1,\ldots,\text{head}_h)W^O
+\operatorname{Concat}(\operatorname{head}_1,\ldots,\operatorname{head}_h)W^O
 $$
 
 where:
 
 $$
-\text{head}_i
+\operatorname{head}_i
 =
-\text{Attention}
-(QW_i^Q,KW_i^K,VW_i^V)
+\operatorname{Attention}
+\left(
+QW_i^Q,
+KW_i^K,
+VW_i^V
+\right)
 $$
 
 <p align="center" style="background-color: white; padding: 20px;">
@@ -249,7 +253,7 @@ These tokens are used to prepare sequences for encoder input, decoder input, and
 
 ```bash
 git clone https://github.com/dileek12/english-sinhala-transformer.git
-cd english-sinhala-transformer
+cd English-sinhala-transformer
 ```
 
 ### 2. Install uv
@@ -331,7 +335,7 @@ The results demonstrate that the model can learn English-to-Sinhala sequence-to-
 ## Translation Examples
 
 <p align="center">
-  <img src="images/preditions.png" width="100%" style="max-width: 800px;">
+  <img src="images/preditions.png" width="75%" style="max-width: 800px;">
   <br>
   <em><b>Figure 4:</b> Example English-to-Sinhala translation results produced by the trained Transformer.</em>
 </p>
