@@ -44,7 +44,7 @@ The original Transformer architecture uses:
 * Layer normalization
 
 <p align="center" style="background-color: white; padding: 20px;">
-  <img src="images/transformer_architecture.png" width="500">
+  <img src="images/transformer_architecture.png" width="450">
   <br>
   <font color="black">
     <em><b>Figure 1:</b> Transformer model architecture.</em>
@@ -56,8 +56,7 @@ The original Transformer architecture uses:
 The attention mechanism is defined as:
 
 $$
-\operatorname{Attention}(Q,K,V) =
-\operatorname{softmax}
+{Attention}(Q,K,V) ={softmax}
 \left(
 \frac{QK^{T}}{\sqrt{d_k}}
 \right)V
@@ -71,7 +70,7 @@ where:
 - $d_k$ = Dimension of the key vectors
 
 <p align="center" style="background-color: white; padding: 20px;">
-  <img src="images/attention_mechanism.png" width="400">
+  <img src="images/attention_mechanism.png" width="350">
   <br>
   <font color="black">
     <em><b>Figure 2:</b> Scaled dot-product attention mechanism.</em>
@@ -102,7 +101,7 @@ VW_i^V
 $$
 
 <p align="center" style="background-color: white; padding: 20px;">
-  <img src="images/multi_head_attention.png" width="350">
+  <img src="images/multi_head_attention.png" width="300">
   <br>
   <font color="black">
     <em><b>Figure 3:</b> Multi-head attention mechanism.</em>
