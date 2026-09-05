@@ -82,9 +82,10 @@ where:
 Multi-head attention applies the attention mechanism in parallel using multiple learned projections:
 
 $$
-{MultiHead}(Q,K,V)
-=
-{Concat}({head}_1,\ldots,{head}_h)W^O
+{MultiHead}(Q,K,V) ={Concat}
+\left(
+{head}_1,\ldots,{head}_h
+\right)W^O
 $$
 
 where:
@@ -112,21 +113,11 @@ Since the Transformer does not use recurrence, positional encoding is added to t
 The sinusoidal positional encoding used in the original Transformer is:
 
 $$
-PE_{(pos,2i)}
-=
-\sin
-\left(
-\frac{pos}{10000^{2i/d_{\text{model}}}}
-\right)
+{PE}_{\left(pos,2i\right)}=\sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
 $$
 
 $$
-PE_{(pos,2i+1)}
-=
-\cos
-\left(
-\frac{pos}{10000^{2i/d_{\text{model}}}}
-\right)
+{PE}_{\left(pos,2i+1\right)}=\cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
 $$
 
 ---
