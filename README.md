@@ -82,22 +82,15 @@ where:
 Multi-head attention applies the attention mechanism in parallel using multiple learned projections:
 
 $$
-\operatorname{MultiHead}(Q,K,V)
+{MultiHead}(Q,K,V)
 =
-\operatorname{Concat}(\operatorname{head}_1,\ldots,\operatorname{head}_h)W^O
+{Concat}({head}_1,\ldots,{head}_h)W^O
 $$
 
 where:
 
 $$
-\operatorname{head}_i
-=
-\operatorname{Attention}
-\left(
-QW_i^Q,
-KW_i^K,
-VW_i^V
-\right)
+{head}_i={Attention}\left(QW_i^Q, KW_i^K, VW_i^V \right)
 $$
 
 <p align="center" style="background-color: white; padding: 20px;">
